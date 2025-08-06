@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+
+<header class="header">
+  <img src="{% static 'images/logo.png' %}" height="100" alt="Logo">
+  <h1>Centro de Adoção e Acolhida de Animais</h1>
+{% if request.user.is_authenticated %}
+<a class="botao-login" href="{% url 'criar_animal' %}">Cadastrar Animal</a>
+<a class="botao-login" href="{% url 'logout' %}">Sair</a>
+{%else%}
+<a class="botao-login" href="{% url 'login' %}">Entrar</a>
+{%endif%}
+
+</header>
+
+<script>  
+const img = document.querySelector('.header img');
+  if (img) {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      window.location.href = '/';
+    });
+  }
+  </script>

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAAM</title>
+</head>
+ <link rel="icon" type="image/png"href="{% static 'images/logo.png' %}" />
+<body>
+    {% include "caam/header.html" %}
+
+{% for animal in animais %}
+    <div style="width: 500px; background-color: rgb(255, 255, 255); " >
+        <div>
+            <img height="300" src="{{ animal.imagem.url }}"/>
+        </div>
+        <div>
+            <a href="/animal/{{ animal.id }}/">{{ animal.nome }}</a>
+              {{ animal.raca }}
+        </div>
+    </div>
+{% endfor %}
+</body>
+</html>

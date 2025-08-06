@@ -1,0 +1,40 @@
+{% include "caam/header.html" %}
+
+<div class="animal-card">
+  <div class="animal-image">
+    <img src="{{ animal.imagem.url }}" alt="Foto de {{ animal.nome }}" />
+  </div>
+  <div class="animal-info">
+    <h2>{{ animal.nome }}</h2>
+    <p><strong>Espécie:</strong> {{ animal.especie.nome }}</p>
+    <p><strong>Raça:</strong> {{ animal.raca.nome }}</p>
+    <p><strong>Sexo:</strong> {{ animal.get_sexo_display }}</p>
+    <p><strong>Data de Nascimento:</strong> {{ animal.data_nascimento }}</p>
+    <p><strong>Data de Cadastro:</strong> {{ animal.data_cadastro }}</p>
+    <p><strong>Descrição:</strong></p>
+    <p>{{ animal.descricao }}</p>
+    {% if animal.tutor %}
+      <p><strong>Data de Adoção:</strong> {{ animal.data_adocao }}</p>
+      <p><strong>Tutor:</strong> {{ animal.tutor }}</p>
+      <h3>ADOTADO</h3>
+    {% else %}
+      {% if request.user.is_authenticated %}
+      <form method="post" action="{% url 'adotar_animal' animal.id %}">
+      {% csrf_token %}
+      <button onclick="notify" class="botao-adotar" type="submit">Adotar</button>
+      </form>
+      {% else %}
+      <a href="{% url 'login' %}">
+      <button class="botao-adotar" type="button">Login para Adotar</button>
+      </a>
+      {% endif %}
+    {% endif %}
+
+  </div>
+</div>
+
+<script>
+   function notify() {
+    alert("Animal adotado!");
+  }
+</script>
