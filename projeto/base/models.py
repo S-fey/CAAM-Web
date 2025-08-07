@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Disciplina(models.Model):
-    nome = models.CharField(verbose_name="Nome")
+    nome = models.CharField(verbose_name="Nome",  max_length=100)
 
     class Meta:
         verbose_name = "Disciplina"
@@ -12,7 +12,7 @@ class Disciplina(models.Model):
         return self.nome
 
 class Trabalho(models.Model):
-    nome = models.CharField(verbose_name="Nome")
+    nome = models.CharField(verbose_name="Nome",  max_length=100)
     disciplina = models.ForeignKey(Disciplina, verbose_name= "Disciplina", on_delete=models.CASCADE)
     data_prevista_entrega = models.DateField(verbose_name="Data Prevista para Entrega")
     data_entrega = models.DateField(verbose_name="Data da Entrega", null=True, blank=True)
