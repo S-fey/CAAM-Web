@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-&%#b*jt==gi%uj^#^gov*ean9*b%-4s2_#j&vdzbcu(jeh$-tv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['caam-web.onrender.com']
+ALLOWED_HOSTS = ['caam-web.onrender.com', '127.0.0.1']
 
 
 # Application definition
@@ -75,24 +75,24 @@ WSGI_APPLICATION = 'projeto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-   }
-}
-
-
 #DATABASES = {
 #    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': os.getenv('caamsql'),
-#        'USER': os.getenv('s-fey'),
-#        'PASSWORD': os.getenv('us5csHsxxT4KowndawKCm4RrqNSjXBtb'),
-#        'HOST': os.getenv('dpg-d2addn6r433s73acqjrg-a'),
-#        'PORT': os.getenv('5432'),
-#    }
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#   }
 #}
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('caamsql'),
+        'USER': os.getenv('s-fey'),
+        'PASSWORD': os.getenv('us5csHsxxT4KowndawKCm4RrqNSjXBtb'),
+        'HOST': os.getenv('dpg-d2addn6r433s73acqjrg-a'),
+        'PORT': os.getenv('5432'),
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
