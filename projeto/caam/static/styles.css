@@ -1,251 +1,211 @@
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header img {
-  height: 100px;
-  width: auto;
-   margin-right: 15px;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  
+  background-color: #f2f2f2;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+
+.header {
+  background-color: #4CAF50;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  margin-bottom: 30px;
 }
 
 .header h1 {
-  margin: 0 20px 0 0;
-  font-size: 1.8rem;
-  font-weight: bold;
   flex-grow: 1;
+  font-size: 1.8rem;
+  color: #2c3e50;
+  font-weight: bold;
 }
 
 .botao-login {
+  padding: 10px 16px;
   background-color: transparent;
   color: white;
-  border: 2px solid white;
-  padding: 8px 18px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: 600;
-  white-space: nowrap;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
-  
+
 .botao-login:hover {
-  background-color: white;
+   background-color: white;
   color: #4CAF50;
 }
-div[style*="width: 500px"] {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  background: white;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
+
+
+.animal-card-container {
+  max-width: auto;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-div[style*="width: 500px"] img {
-  height: 300px;
-  border-radius: 5px;
+.animal-card img {
+  width: auto;
+  height: 500px;
+  display: block;
 }
 
-div[style*="width: 500px"] > div:last-child {
-  font-size: 2rem;
-  color: #333;
-}
-
-div[style*="width: 500px"] > div:last-child a {
-  color: #2a7a2a;
-  text-decoration: none;
+.animal-card a {
+  font-size: 1.3rem;
   font-weight: bold;
+  color: #2980b9;
+  text-decoration: none;
+  margin: 10px;
+  display: block;
 }
 
-div[style*="width: 500px"] > div:last-child a:hover {
+.animal-card a:hover {
   text-decoration: underline;
 }
 
+
 .animal-card {
+  padding: 20px;
   display: flex;
-  gap: 30px;
-  align-items: center;
-  border: #333;
-  box-shadow: #1b1b1b;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.animal-card2 {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 .animal-image img {
-  height: 400px;
+  width: auto;
+  border-radius: 10px;
 }
 
 .animal-info {
-  font-size: 2rem;
-  color: #333;
+  padding: 10px;
+}
+
+.animal-info h2 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.animal-info p {
+  margin-bottom: 8px;
 }
 
 .botao-adotar {
-  background-color: #28a745;
+  padding: 10px 16px;
+  background-color: #4CAF50;
   color: white;
-  border: none;
-  padding: 12px 25px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  border-radius: 8px;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .botao-adotar:hover {
-  background-color: #218838;  
-}
-
-.botao-login {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-  padding: 8px 18px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: 600;
-  margin-right: 15px;
-}
-
-.botao-login:hover {
-  background-color: white;
-  color: #4CAF50; 
+   background-color: white;
+  color: #4CAF50;
 }
 
 
-.login-page {
-  max-width: 400px;
-  margin: 50px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.login-page h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-  
-}
-
-.login-page form p {
-  margin-bottom: 12px;
-}
-
-.login-page button {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.login-page a {
-  display: block;
-  margin-top: 15px;
-  text-align: center;
-  color: #007bff;
-  text-decoration: none;
-}
-
-
-.register-page {
-  max-width: 400px;
-  margin: 50px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.register-page h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.register-page form p {
-  margin-bottom: 12px;
-}
-
-.register-page button {
-  width: 100%;
-  background-color: #2196F3;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.register-page a {
-  display: block;
-  margin-top: 15px;
-  text-align: center;
-  color: #007bff;
-  text-decoration: none;
-}
-
-.voltar button{
-    width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-.voltar h2{
-    text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-.voltar a{
-  display: block;  
-  margin: 0 auto;
-  width: 20%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  text-align: center;
+h3 {
+  color: #e74c3c;
   font-weight: bold;
-}
-.cadastroAnimal {
-  max-width: 400px;
-  margin: 50px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 15px;
 }
 
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+form button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #2980b9;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+
+.login-page, .register-page, .cadastroAnimal {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.login-page h2,
+.register-page h2,
 .cadastroAnimal h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #2c3e50;
 }
 
-.cadastroAnimal button {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
+.login-page a,
+.register-page a {
+  text-align: center;
+  display: block;
+  margin-top: 15px;
+  color: #2980b9;
 }
-.cadastroAnimal form p {
-  margin-bottom: 12px;
+
+
+.voltar {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.botao-voltar {
+  background-color: #e62222;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.botao-voltar:hover {
+  background-color: #ff0000;
 }

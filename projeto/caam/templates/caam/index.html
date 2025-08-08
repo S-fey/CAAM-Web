@@ -9,17 +9,17 @@
  <link rel="icon" type="image/png"href="{% static 'images/logo.png' %}" />
 <body>
     {% include "caam/header.html" %}
-
+ <div style="display: flex; flex-wrap: wrap; gap: 10px;">
 {% for animal in animais %}
-    <div style="width: 500px; background-color: rgb(255, 255, 255); " >
-        <div>
+    <div class='animal-card-container' style="width: 500px; background-color: rgb(255, 255, 255); " >
+        <div class="animal-card">
             <img height="300" src="{{ animal.imagem.url }}"/>
-        </div>
-        <div>
+
             <a href="/animal/{{ animal.id }}/">{{ animal.nome }}</a>
               {{ animal.raca }}
         </div>
     </div>
 {% endfor %}
+</div>
 </body>
 </html>

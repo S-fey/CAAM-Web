@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-&%#b*jt==gi%uj^#^gov*ean9*b%-4s2_#j&vdzbcu(jeh$-tv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['caam-web.onrender.com']
+ALLOWED_HOSTS = ['caam-web.onrender.com', '127.0.0.1']
 
 
 # Application definition
@@ -75,22 +75,27 @@ WSGI_APPLICATION = 'projeto.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-# old database:
+
+
+# OLD DATABASE
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#   }
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    },
 #}
 
-
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL'),
-        conn_max_age=600,
-        ssl_require=True
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'caamsql',
+        'USER': 'sfey',
+        'PASSWORD': 'us5csHsxxT4KowndawKCm4RrqNSjXBtb',
+        'HOST': 'dpg-d2addn6r433s73acqjrg-a.oregon-postgres.render.com',
+        'PORT': '5432',
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
