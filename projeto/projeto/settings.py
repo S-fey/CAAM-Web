@@ -25,9 +25,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = 'django-insecure-&%#b*jt==gi%uj^#^gov*ean9*b%-4s2_#j&vdzbcu(jeh$-tv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['caam-web.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['caam-web.onrender.com', '127.0.0.1', "140.238.178.230", "caam.aplicativo.click"]
 
 
 # Application definition
@@ -84,15 +84,14 @@ WSGI_APPLICATION = 'projeto.wsgi.application'
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    },
 #}
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'caamsql',
-        'USER': 'sfey',
-        'PASSWORD': 'us5csHsxxT4KowndawKCm4RrqNSjXBtb',
-        'HOST': 'dpg-d2addn6r433s73acqjrg-a.oregon-postgres.render.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'caam',
+        'USER': 'postgres',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '5432'
     }
 }
 
